@@ -32,7 +32,10 @@ jobs:
           port: 21
           protocol: ftps        # FTP com TLS. Se falhar o handshake, troque para: ftp
           security: loose
-          server-dir: ./
+          # A conta FTP aponta para public_html (raiz do site principal),
+          # entao enviamos explicitamente para a subpasta do subdominio.
+          # Isso protege o site funil-comercial de ser sobrescrito.
+          server-dir: ./elisamelo/
           exclude: |
             **/.git*
             **/.git*/**
