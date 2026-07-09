@@ -1,0 +1,41 @@
+name: Deploy Hostinger (FTP)
+
+# Publica o site na Hostinger a cada push na branch main.
+# Site estatico: nao ha build, apenas envio dos arquivos por FTP.
+#
+# Secrets necessarios (Settings > Secrets and variables > Actions):
+#   FTP_HOST      -> 62.72.62.179  (ou ftp.funilcomercial.com)
+#   FTP_USERNAME  -> usuario da conta FTP dedicada (aponta para /public_html/elisamelo)
+#   FTP_PASSWORD  -> senha dessa conta FTP
+#
+# Como a conta FTP ja aponta para a pasta elisamelo, o destino (server-dir) e a raiz "./".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Enviar para a Hostinger
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositorio
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftps        # FTP com TLS. Se falhar o handshake, troque para: ftp
+          security: loose
+          server-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/README*.md
+            **/*.md
