@@ -13,3 +13,7 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# Materiais de marketing, nao publicar no site do cliente
+proposta-*.png
+nova-foto.*
