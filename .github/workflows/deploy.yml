@@ -4,11 +4,11 @@ name: Deploy Hostinger (FTP)
 # Site estatico: nao ha build, apenas envio dos arquivos por FTP.
 #
 # Secrets necessarios (Settings > Secrets and variables > Actions):
-#   FTP_HOST      -> 62.72.62.179  (ou ftp.funilcomercial.com)
-#   FTP_USERNAME  -> usuario da conta FTP dedicada (aponta para /public_html/elisamelo)
+#   FTP_HOST      -> 62.72.62.179
+#   FTP_USERNAME  -> u299917777.elisasouza (aponta direto para o public_html do dominio proprio)
 #   FTP_PASSWORD  -> senha dessa conta FTP
 #
-# Como a conta FTP ja aponta para a pasta elisamelo, o destino (server-dir) e a raiz "./".
+# A conta FTP dedicada aponta para a raiz do dominio nutrielisasouza.com.br, entao server-dir e "./".
 
 on:
   push:
@@ -32,10 +32,8 @@ jobs:
           port: 21
           protocol: ftps        # FTP com TLS. Se falhar o handshake, troque para: ftp
           security: loose
-          # A conta FTP aponta para public_html (raiz do site principal),
-          # entao enviamos explicitamente para a subpasta do subdominio.
-          # Isso protege o site funil-comercial de ser sobrescrito.
-          server-dir: ./elisamelo/
+          # A conta FTP dedicada ja aponta para o public_html do dominio proprio.
+          server-dir: ./
           exclude: |
             **/.git*
             **/.git*/**
