@@ -179,6 +179,16 @@
   .plan.featured li svg{color:var(--sage-deep)}
   .plan .price{font-family:"Cormorant Garamond",serif;font-size:1.3rem;margin-bottom:16px;opacity:.9}
   .plan.featured .price{color:var(--sage-deep)}
+  .plan .price strong{font-size:1.9rem;font-weight:700;display:block;line-height:1.1}
+  .plan .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+  .plan .price-box{border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 8px;text-align:center}
+  .plan.featured .price-box{border-color:rgba(60,90,80,.18);background:rgba(255,255,255,.6)}
+  .plan .price-box .mod{display:block;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#b7c3b2}
+  .plan.featured .price-box .mod{color:var(--muted)}
+  .plan .price-box .val{display:block;font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:700;line-height:1.2;margin-top:2px}
+  .plan.featured .price-box .val{color:var(--sage-deep)}
+  .plan .note{font-size:.84rem;color:#b7c3b2;margin-bottom:18px;line-height:1.5}
+  .plan.featured .note{color:var(--muted)}
 
   /* Testimonials */
   .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -431,49 +441,56 @@
     <div class="sec-head reveal">
       <p class="kicker">Planos de acompanhamento</p>
       <h2>Escolha o cuidado ideal para você</h2>
-      <p>Do primeiro diagnóstico ao acompanhamento contínuo. Fale comigo pelo WhatsApp e monte o plano certo para o seu objetivo.</p>
+      <p>Do primeiro atendimento ao acompanhamento contínuo. Fale comigo pelo WhatsApp e monte o plano certo para o seu objetivo.</p>
     </div>
     <div class="plans">
 
       <div class="plan reveal">
-        <span class="tag">Primeiro passo</span>
-        <h3>Sessão Pontual</h3>
-        <p class="desc">Ideal para começar: entender seu momento e receber a primeira direção.</p>
+        <span class="tag">Para elas</span>
+        <h3>Emagrecimento Feminino</h3>
+        <p class="desc">Chega de efeito rebote: emagreça com estratégia, saúde e resultados duradouros.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Diagnóstico nutricional</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Plano alimentar personalizado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Orientações iniciais</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Acompanhamento nutricional completo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Estratégias adequadas para a sua rotina</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Emagrecimento saudável, sem restrições extremas</li>
         </ul>
         <p class="price">Valores sob consulta</p>
-        <a class="btn btn-wa btn-block" href="https://wa.me/5547999505265?text=Ol%C3%A1%20Dra.%20Elisa!%20Tenho%20interesse%20na%20Sess%C3%A3o%20Pontual." target="_blank" rel="noopener">Quero começar</a>
+        <a class="btn btn-wa btn-block" href="https://wa.me/5547999505265?text=Ol%C3%A1%20Dra.%20Elisa!%20Tenho%20interesse%20no%20plano%20de%20Emagrecimento%20Feminino." target="_blank" rel="noopener">Quero emagrecer com saúde</a>
       </div>
 
       <div class="plan featured reveal">
-        <span class="tag">Mais escolhido</span>
-        <h3>Plano 90 dias</h3>
-        <p class="desc">O equilíbrio ideal entre resultado e constância, com acompanhamento próximo.</p>
+        <span class="tag">Condições especiais</span>
+        <h3>Acompanhamento Personalizado</h3>
+        <p class="desc">Acompanhamento nutricional completo de 1 mês, na modalidade que for melhor para você.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Tudo da Sessão Pontual</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Acompanhamento contínuo do plano</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Avaliação por bioimpedância</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Ajustes e reavaliações periódicas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>1 hora de atendimento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Prescrição de exames</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Prescrição de suplementação</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Plano alimentar personalizado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Suporte durante o acompanhamento</li>
         </ul>
-        <p class="price">Valores sob consulta</p>
-        <a class="btn btn-primary btn-block" href="https://wa.me/5547999505265?text=Ol%C3%A1%20Dra.%20Elisa!%20Tenho%20interesse%20no%20Plano%2090%20dias." target="_blank" rel="noopener">Quero este plano</a>
+        <div class="price-grid">
+          <div class="price-box"><span class="mod">Online</span><span class="val">R$ 620,00</span></div>
+          <div class="price-box"><span class="mod">Presencial</span><span class="val">R$ 850,00</span></div>
+        </div>
+        <p class="note">Cartão de crédito ou PIX · <b>10% de desconto no PIX</b></p>
+        <a class="btn btn-primary btn-block" href="https://wa.me/5547999505265?text=Ol%C3%A1%20Dra.%20Elisa!%20Tenho%20interesse%20no%20Acompanhamento%20Nutricional%20Personalizado%20de%201%20m%C3%AAs." target="_blank" rel="noopener">Quero este acompanhamento</a>
       </div>
 
       <div class="plan reveal">
-        <span class="tag">Transformação completa</span>
-        <h3>Plano 180 dias</h3>
-        <p class="desc">Para quem busca uma mudança sólida e duradoura, com suporte em cada etapa.</p>
+        <span class="tag">Para eles</span>
+        <h3>Protocolo Masculino</h3>
+        <p class="desc">22 dias de transformação: menos peso, mais saúde, mais energia e disposição.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Tudo do Plano 90 dias</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Reeducação alimentar aprofundada</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Suplementação quando necessária</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Acompanhamento estendido de resultados</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Plano alimentar personalizado conforme seu objetivo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Cardápio completo para 22 dias e lista de compras</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Acompanhamento nutricional com horário marcado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Materiais de apoio (e-books e guias)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Dicas práticas, motivação e suporte contínuo</li>
         </ul>
-        <p class="price">Valores sob consulta</p>
-        <a class="btn btn-wa btn-block" href="https://wa.me/5547999505265?text=Ol%C3%A1%20Dra.%20Elisa!%20Tenho%20interesse%20no%20Plano%20180%20dias." target="_blank" rel="noopener">Quero este plano</a>
+        <p class="price"><strong>R$ 520,00</strong></p>
+        <a class="btn btn-wa btn-block" href="https://wa.me/5547999505265?text=Ol%C3%A1%20Dra.%20Elisa!%20Tenho%20interesse%20no%20Protocolo%20Masculino%20de%2022%20dias." target="_blank" rel="noopener">Quero o protocolo</a>
       </div>
 
     </div>
